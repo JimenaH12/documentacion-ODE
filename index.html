@@ -329,7 +329,7 @@
 <p>Se sustraen ambas ecuaciones y se obtiene </p>
 <p>x(t+h) = x(t) + h(dx/dt)_{t+h/2} + O(h^{3})</p>
 <p>Finalmente</p>
-<p>x(t+h) = x(t) + hf[x(t+h/2), t + h/2] + O()h^{3}</p>
+<p>x(t+h) = x(t) + hf(x(t+h/2), t + h/2) + O()h^{3}</p>
 <p>Con esto se llega a un nuevo orden h^{3}, el cual nos genera una mejor aproximación. No obstante, se requiere conocer el valor de la función de punto medio x(t+h/2), pero para esto se puede utilizar el método de Euler con el paso h/2, (x+h/2) = x(t) + h/2 f(x,t). Así se encuentran las ecuaciones del método RK2:</p>
 <ul>
 <li>$k_1 = hf(x, t)$,</li>
