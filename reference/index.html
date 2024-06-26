@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#metodos.metodos_numericos" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -176,6 +181,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Referencias
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -185,6 +201,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos" class="md-nav__link">
+    <span class="md-ellipsis">
+      metodos_numericos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.ecu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ecu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      euler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.rk2" class="md-nav__link">
+    <span class="md-ellipsis">
+      rk2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.rk4" class="md-nav__link">
+    <span class="md-ellipsis">
+      rk4
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -208,6 +286,59 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos" class="md-nav__link">
+    <span class="md-ellipsis">
+      metodos_numericos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.ecu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ecu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      euler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.rk2" class="md-nav__link">
+    <span class="md-ellipsis">
+      rk2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos.metodos_numericos.rk4" class="md-nav__link">
+    <span class="md-ellipsis">
+      rk4
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -223,7 +354,619 @@
 
   <h1>Referencias</h1>
 
-<p>El módulo :::metodos_ODE.ODE demuestra como se implementan los métodos de resolución de EDO. </p>
+<p>Esta parte del proyecto se enfoca en <strong>información-orientada</strong> .Utilicelo como una referencia tecnica de la implementacion de <code>metodos</code> para el calculo de EDO</p>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="metodos.metodos_numericos"></a>
+    <div class="doc doc-contents first">
+
+      <p>Provee diferentes metodos de calcular el valor de ecuaciones diferenciales ordinarias.</p>
+<p>Este modulo permite al usuario hacer calculos matematicos.</p>
+<p>El modulo contiene las siguientes funciones:</p>
+<ul>
+<li><code>ecu(x,t)</code> - Devuelve el valor de una funcion especifica.</li>
+<li><code>euler(ecu, x0, t)</code> - Devuelve una lista con los valores dx/dt calculandolos mediante el metodo de euler.</li>
+<li><code>rk2(ecu, x0, t)</code> - Devuelve una lista con los valores dx/dt calculandolos mediante el metodo de runge-kutta de orden 2.</li>
+<li><code>rk4(ecu, x0, t)</code> - Devuelve una lista con los valores dx/dt calculandolos mediante el metodo de runge-kutta de orden 4.</li>
+</ul>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="metodos.metodos_numericos.ecu" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Ecuación utilizada para los ejemplos. Devuelve un valor.</p>
+<p>Examples:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>ecu(1,3)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>-0.8588799919401328</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>x</code></td>
+            <td>
+                  <code>double</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>valor para calcular x' de la ecuacion diferencial ordinaria</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t</code></td>
+            <td>
+                  <code>double</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>valor para calcular x' de la ecuacion diferencial ordinaria</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+      <p>Return:
+        double: valor de dx/dt según los x y t que se suministrarón a la función.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>metodos/metodos_numericos.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Ecuación utilizada para los ejemplos. Devuelve un valor.</span>
+
+<span class="sd">	Examples:</span>
+
+<span class="sd">	&gt;&gt;&gt; ecu(1,3)</span>
+
+<span class="sd">	-0.8588799919401328</span>
+
+<span class="sd">	Args:</span>
+<span class="sd">	      x (double): valor para calcular x&#39; de la ecuacion diferencial ordinaria</span>
+<span class="sd">	      t (double): valor para calcular x&#39; de la ecuacion diferencial ordinaria</span>
+<span class="sd">	Return:</span>
+<span class="sd">		double: valor de dx/dt según los x y t que se suministrarón a la función.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="metodos.metodos_numericos.euler" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">euler</span><span class="p">(</span><span class="n">ecu</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Devuelve una lista con los valores de la ecuación diferencial utilizando el método numérico de Euler.</p>
+<pre><code>Examples:
+
+&gt;&gt;&gt; euler(ecu,0, t1)
+array([0.        , 0.28049033, 0.59711379, 0.85795049])
+</code></pre>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ecu</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Función que representa la ecuación diferencial dx/dt.
+Debe aceptar dos argumentos: x (valor actual de la variable) y t (tiempo actual).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>x0</code></td>
+            <td>
+                  <code>double</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial de la variable x.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t</code></td>
+            <td>
+                  <code>array - like</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Arreglo de tiempos en los cuales se evalúa la ecuación diferencial.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>np.ndarray: Arreglo con los valores de la variable x calculados por el método de Euler.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>metodos/metodos_numericos.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">euler</span><span class="p">(</span><span class="n">ecu</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Devuelve una lista con los valores de la ecuación diferencial utilizando el método numérico de Euler.</span>
+
+<span class="sd">	Examples:</span>
+
+<span class="sd">	&gt;&gt;&gt; euler(ecu,0, t1)</span>
+<span class="sd">	array([0.        , 0.28049033, 0.59711379, 0.85795049])</span>
+
+
+
+<span class="sd">    Args:</span>
+<span class="sd">        ecu (callable): Función que representa la ecuación diferencial dx/dt.</span>
+<span class="sd">            Debe aceptar dos argumentos: x (valor actual de la variable) y t (tiempo actual).</span>
+<span class="sd">        x0 (double): Valor inicial de la variable x.</span>
+<span class="sd">        t (array-like): Arreglo de tiempos en los cuales se evalúa la ecuación diferencial.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: Arreglo con los valores de la variable x calculados por el método de Euler.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+	<span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+	<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+		<span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+	<span class="k">return</span> <span class="n">x</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="metodos.metodos_numericos.rk2" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">rk2</span><span class="p">(</span><span class="n">ecu</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Devuelve una lista con los valores de la ecuación diferencial utilizando Método de Runge-Kutta 2do orden.</p>
+<pre><code>Examples:
+&gt;&gt;&gt; rk2(ecu,0, t1 )
+array([0.        , 0.30556218, 0.60501975, 0.79511031])
+</code></pre>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ecu</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Función que representa la ecuación diferencial dx/dt.
+Debe aceptar dos argumentos: x (valor actual de la variable) y t (tiempo actual).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>x0</code></td>
+            <td>
+                  <code>double</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial de la variable x.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t</code></td>
+            <td>
+                  <code>array - like</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Arreglo de tiempos en los cuales se evalúa la ecuación diferencial.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>np.ndarray: Arreglo con los valores de la variable x calculados por el Método de Runge-Kutta 2do Orden.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>metodos/metodos_numericos.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rk2</span><span class="p">(</span><span class="n">ecu</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Devuelve una lista con los valores de la ecuación diferencial utilizando Método de Runge-Kutta 2do orden.</span>
+
+<span class="sd">	Examples:</span>
+<span class="sd">	&gt;&gt;&gt; rk2(ecu,0, t1 )</span>
+<span class="sd">	array([0.        , 0.30556218, 0.60501975, 0.79511031])</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ecu (callable): Función que representa la ecuación diferencial dx/dt.</span>
+<span class="sd">            Debe aceptar dos argumentos: x (valor actual de la variable) y t (tiempo actual).</span>
+<span class="sd">        x0 (double): Valor inicial de la variable x.</span>
+<span class="sd">        t (array-like): Arreglo de tiempos en los cuales se evalúa la ecuación diferencial.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: Arreglo con los valores de la variable x calculados por el Método de Runge-Kutta 2do Orden.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+	<span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+	<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+		<span class="n">k1</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+		<span class="n">k2</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k1</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span>
+		<span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">k2</span>
+	<span class="k">return</span> <span class="n">x</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="metodos.metodos_numericos.rk4" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">rk4</span><span class="p">(</span><span class="n">ecu</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Devuelve una lista con los valores de la ecuación diferencial utilizando Método de Runge-Kutta 4to orden.</p>
+<pre><code>Examples:
+
+&gt;&gt;&gt; rk4(ecu,0, t1)
+array([0.        , 0.3027825 , 0.5988007 , 0.79754751])
+</code></pre>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ecu</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Función que representa la ecuación diferencial dx/dt.
+Debe aceptar dos argumentos: x (valor actual de la variable) y t (tiempo actual).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>x0</code></td>
+            <td>
+                  <code>double</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial de la variable x.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t</code></td>
+            <td>
+                  <code>array - like</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Arreglo de tiempos en los cuales se evalúa la ecuación diferencial.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>np.ndarray: Arreglo con los valores de la variable x calculados por el Método de Runge-Kutta 4to Orden.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>metodos/metodos_numericos.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">ecu</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Devuelve una lista con los valores de la ecuación diferencial utilizando Método de Runge-Kutta 4to orden.</span>
+
+
+<span class="sd">	Examples:</span>
+
+<span class="sd">	&gt;&gt;&gt; rk4(ecu,0, t1)</span>
+<span class="sd">	array([0.        , 0.3027825 , 0.5988007 , 0.79754751])</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ecu (callable): Función que representa la ecuación diferencial dx/dt.</span>
+<span class="sd">            Debe aceptar dos argumentos: x (valor actual de la variable) y t (tiempo actual).</span>
+<span class="sd">        x0 (double): Valor inicial de la variable x.</span>
+<span class="sd">        t (array-like): Arreglo de tiempos en los cuales se evalúa la ecuación diferencial.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: Arreglo con los valores de la variable x calculados por el Método de Runge-Kutta 4to Orden.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+	<span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+	<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">x0</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+		<span class="n">k1</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+		<span class="n">k2</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k1</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span>
+		<span class="n">k3</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">k2</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span>
+		<span class="n">k4</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">ecu</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">k3</span><span class="p">,</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span>
+		<span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">k3</span><span class="o">+</span><span class="n">k4</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span>
+	<span class="k">return</span> <span class="n">x</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
